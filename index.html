@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong Rally</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        
+        <div class="score">
+            <span class="player1">0</span>
+            <span class="player2">0</span>
+        </div>
+        
+        <button class="exit-btn">X</button>
+        <button class="pause-btn">II</button>
+        
+        <!-- Menú principal -->
+        <div class="menu">
+            <h1>PONG RALLY</h1>
+            <button class="btn" id="play1vs1">1 VS 1</button>
+            <button class="btn" id="playVsAI">VS MAQUINA</button>
+            <button class="btn" id="optionsBtn">OPCIONES</button>
+        </div>
+        
+        <!-- Menú de opciones -->
+        <div class="options-menu">
+            <div class="options-container">
+                <div class="option-section">
+                    <h2>DIFICULTAD</h2>
+                    <div class="difficulty-options">
+                        <button class="difficulty-btn" data-difficulty="easy">FACIL</button>
+                        <button class="difficulty-btn" data-difficulty="medium">MEDIO</button>
+                        <button class="difficulty-btn active" data-difficulty="hard">DIFICIL</button>
+                    </div>
+                </div>
+                
+                <div class="option-section">
+                    <h2>CONTROLES</h2>
+                    <div class="controls-visual">
+                        <div class="player-controls">
+                            <h3>JUGADOR 1</h3>
+                            <div class="keyboard-visual">
+                                <div class="key">W</div><br>
+                                <div class="key">S</div>
+                            </div>
+                        </div>
+                        <div class="player-controls">
+                            <h3>JUGADOR 2</h3>
+                            <div class="keyboard-visual">
+                                <div class="key">↑</div><br>
+                                <div class="key">↓</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile-controls-info">
+                        En movil: Desliza en el lado izquierdo para mover Jugador 1, lado derecho para Jugador 2
+                    </div>
+                </div>
+                
+                <div class="option-section">
+                    <h2>REGLAS</h2>
+                    <p>Primero en llegar a 10 puntos gana.</p>
+                    <p>La pelota se acelera con cada rebote.</p>
+                </div>
+                
+                <button class="btn" id="backToMenuBtn">VOLVER AL MENU</button>
+            </div>
+        </div>
+        
+        <!-- Pantalla de victoria -->
+        <div class="victory-screen">
+            <div class="victory-message"></div>
+            <button class="btn" id="playAgainBtn">JUGAR DE NUEVO</button>
+            <button class="btn" id="mainMenuBtn">MENU PRINCIPAL</button>
+        </div>
+        
+        <!-- Confirmación de salida -->
+        <div class="confirm-exit">
+            <div class="confirm-message">SEGURO QUE QUIERES SALIR?</div>
+            <div class="confirm-buttons">
+                <button class="btn" id="confirmExitYes">SI</button>
+                <button class="btn" id="confirmExitNo">NO</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/game.js"></script>
+</body>
+</html>
