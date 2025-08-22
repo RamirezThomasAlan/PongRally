@@ -365,11 +365,14 @@ canvas {
 .mobile-controls-info {
     position: absolute;
     bottom: 20px;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 90%;       /* así el texto se corta en varias líneas de forma natural */
     text-align: center;
     font-size: 0.8rem;
     color: #888;
     display: none;
+    line-height: 1.4;     /* mejora la lectura */
 }
 
 @media (max-width: 768px) {
